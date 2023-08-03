@@ -1,0 +1,1378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: blueviolet;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #001220;
+}
+#home{
+    width: 100%;
+    float: left;
+    height: 721px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #001220;
+    z-index: 100;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    background-color:  #001220;
+    transition: background-color 0.3s;
+    z-index: 9999;
+    position: fixed;   
+}
+nav #menuicon {
+    float: right;
+    top: -46px;
+    margin-right: 33px;
+    position: relative;
+    display: none;
+    transition: 0.5s;
+    animation-name: icon;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+nav #menuicon:active {
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+@keyframes icon{
+    from{
+        opacity: 0;
+        transform:scaleY(0)
+    }
+    to{
+        opacity: 1;
+        transform:scaleY(1)
+    }
+}
+nav h1{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    padding: 10px 60px;
+    text-decoration: none;
+    animation-name: anmh1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    cursor: pointer;
+    width: 0;
+}
+@keyframes anmh1{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+nav h1 span{
+    color:blueviolet;
+}
+nav ul {
+    color: white;
+    list-style: none;
+    display: flex;
+    top: 0;
+    position: absolute;
+    padding: 0;
+    margin-left: 32%;
+    transition: 1s;
+    animation-name: anmul;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+nav ul li a{
+    color: blueviolet;
+    transition: 0.5s;
+}
+@keyframes anmul{
+    from{
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+nav ul li{
+    padding: 30px;
+    font-size: 22px;
+    color: blueviolet;
+    cursor: pointer;
+    position: relative;
+    z-index: 80;
+    transition: 0.5s;
+}
+@keyframes anmp{
+    from{
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+}}
+
+li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    transition: width 0.5s ease-out;
+}
+li:hover::after {
+    width: 90%;
+    right: initial;
+    left: 15px;
+    margin-left: -5px;
+}
+nav ul li:hover a{
+    color: rgb(175, 114, 232);
+}
+nav a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(blueviolet);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(blueviolet, #001220);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background:#001220;
+}
+#home .main{
+    width: 80%;
+    height: 527px;
+    position: absolute;
+    top: 120px;
+    left: 9%;
+}
+#home .main .txt{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 64px;
+}
+#home .main .txt #p1{
+    position: absolute;
+    top: 10%;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    animation-name: anmp;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    transition: 0.5s;
+}
+#home .main .txt h1{
+    font-size: 85px;
+    color: white;
+    top: 35%;
+    position: absolute;
+    animation-name: anmh1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    transition: 0.5s;
+    letter-spacing: 1px;
+}
+#home h1 span{
+    color: blueviolet;
+}
+#home .main .txt h1:hover{
+    letter-spacing: 5px;
+}
+#home .main .txt #p2{
+    position: absolute;
+    top: 80%;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
+    animation-name: anmp2;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    transition: 2s;
+}
+#home #p2 span{
+    color: blueviolet;
+}
+@keyframes anmp2{
+    from{
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#home .main .img{
+    width: 42%;
+    height: 400px;
+    position: absolute;
+    left: 58%;
+    top: 64px;
+}
+#home .main .img #logome{
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: -84px;
+    animation-name: logoanm;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+@keyframes logoanm{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+#about{
+    width: 100%;
+    float: left;
+    height: 721px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #001220;
+}
+#about .main{
+    width: 80%;
+    height: 527px;
+    position: absolute;
+    top: 120px;
+    left: 9%;
+}
+#about .main .img{
+    width: 366px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#about .main .img #me2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 22px;
+}
+#about .main .ab{
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    left: 427px;
+}
+#about .main .ab .txt{
+    width: 100%;
+    height: 202px;
+    left: 0;
+    top: 0;
+}
+#about .main .ab .txt h2{
+    font-size: 45px;
+    top: 0;
+    left: 0;
+    color: white;
+    position: absolute;
+    animation-name: anmh2;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    transition: 1.5s;
+}
+#about .main .ab .txt h2:hover{
+    transform: rotateX(-360deg);
+}
+#about .main .ab .txt h2 span{
+    color: blueviolet;
+}
+#about .main .ab .txt p{
+    position: absolute;
+    top: 68px;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 1px;
+    animation-name: p1;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    transition: 1.5s;
+}
+#about .main .ab .txt p:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#about .main .ab .sd{
+    width: 100%;
+    height: 325px;
+    position: absolute;
+}
+#about .main  .ab .sd #skills{
+    position: absolute;
+    top: 20px;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-bottom: 3px solid blueviolet;
+    padding-bottom: 5px;
+    width: 50px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+#about .main  .ab .sd #education{
+    position: absolute;
+    top: 20px;
+    left: 185px;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    width: 50px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+#about .main  .ab .sd .skillsdiv{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 60%;
+    height: 234px;
+    animation-name: anmsk;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    transition: 1.5s;
+}
+@keyframes anmsk{
+    from{
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+#about .main  .ab .sd .skillsdiv .htmldiv{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+}
+#about .main  .ab .sd .skillsdiv .htmldiv #htmlogo,
+#about .main  .ab .sd .skillsdiv .cssdiv #csslogo,
+#about .main  .ab .sd .skillsdiv .jsdiv #jslogo{
+    height: 100%;
+    width: 65px;
+    margin-right: 15px;
+    position: absolute;
+}
+#about .main  .ab .sd .skillsdiv .htmldiv h1,
+#about .main  .ab .sd .skillsdiv .cssdiv h1,
+#about .main  .ab .sd .skillsdiv .jsdiv h1{
+    font-size: 19px;
+    position: absolute;
+    margin: 0px 0px 0px 80px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+#about .main .ab .sd .skillsdiv .htmldiv #htmlpq,
+#about .main .ab .sd .skillsdiv .cssdiv #csspq,
+#about .main .ab .sd .skillsdiv .jsdiv #jspq{
+    width: 82%;
+    height: 15px;
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 30px 0px 0px 80px;
+    transition: 2s;
+}
+#about .main  .ab .sd .skillsdiv .cssdiv{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 91px;
+}
+#about .main  .ab .sd .skillsdiv .jsdiv{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 181px;
+}
+#about ::-webkit-progress-value {
+    background-color: blueviolet;
+    border-radius: px;
+}
+#about ::-webkit-progress-bar{
+    background-color: rgb(16, 16, 16);
+    border-radius: 0px;
+}
+#about .main  .ab .sd .educationsdiv{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    height: 234px;
+    background-color: #001220;
+    animation-name: anmh2;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    transition: 1.5s;
+    display: none;
+}
+@keyframes anmh2{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#about .main  .ab .sd .educationsdiv #year{
+    font-size: 25px;
+    color: blueviolet;
+    letter-spacing: 1px;
+}
+#about .main  .ab .sd .educationsdiv #p2{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 5%;
+    transition: 1.5s;
+}
+#projects{
+    width: 100%;
+    float: left;
+    height: 721px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #001220;
+}
+#projects .main{
+    width: 85%;
+    height: 626px;
+    position: absolute;
+    top: 87px;
+    left: 7%;
+}
+#projects .main .txt{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#projects .main .txt h1{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 53px;
+    position: absolute;
+    top: -10px;
+    transition: 1.5s;
+    animation-name: anmh2;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    transition: 1.5s;
+}
+#projects .main .txt h1:hover{
+    transform: rotateX(-360deg);
+}
+#projects .main .txt h1 span{
+    color: blueviolet;
+}
+#projects .main .pr{
+    width: 100%;
+    height: 546px;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#projects .main .pr p span{
+    color: blueviolet;
+    font-weight: 800;
+}
+#projects .main .pr .bne{
+    width: 30%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+#projects .main .pr .bne a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#projects .main .pr .bne #bne{
+    border-radius: 15px 15px 0px 0px;
+    height: 490px;
+    width: 100%;
+    margin-top: -55px;
+}
+#projects .main .pr .bne p{
+    position: absolute;
+    top: 498px;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+    transition: 1.5s;
+}
+#projects .main .pr .bne:hover{
+    transform: translateY(-15px);
+    transition: 0.5s;
+}
+#projects .main .pr .fg{
+    width: 30%;
+    height: 100%;
+    left: 5%;
+    position: relative;
+    transition: 0.5s;
+}
+#projects .main .pr .fg:hover,
+#projects .main .pr .fb:hover{
+    transform: translateY(-15px);
+    transition: 0.5s;
+}
+#projects .main .pr .fg .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#projects .main .pr .fb .main #fblogo{
+    border-radius: 15px 15px 0px 0px;
+    height: 490px;
+    width: 100%;
+    margin-top: -55px;
+}
+#projects .main .pr .fg .main #fglogo{
+    width: 100%;
+    height: 465px;
+    margin-top: -82px;
+    border-radius: 15px 15px 0px 0px;
+}
+#projects .main .pr .fg .main span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -47px;
+}
+#projects .main .pr .fg .main p{
+    top: 468px;
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+    transition: 1.5s;
+}
+#projects .main .pr .fb .main p{
+    position: absolute;
+    top: 498px;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 2px;
+    transition: 1.5s;
+}
+#projects .main .pr .fb{
+    width: 30%;
+    height: 100%;
+    left: 10%;
+    position: relative;
+    transition: 0.5s;
+}
+#projects .main .pr .fb .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+#contact{
+    width: 100%;
+    float: left;
+    height: 721px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #001220;
+}
+#contact .main{
+    width: 80%;
+    height: 527px;
+    position: absolute;
+    top: 120px;
+    left: 9%;
+}
+#contact .main .txt{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#contact .main .txt h2{
+    font-size: 55px;
+    color: white;
+    left: -3px;
+    position: absolute;
+    animation-name: anmh3;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    transition: 1.5s;
+}
+#contact .main .txt h2:hover{
+    transform: rotateX(-360deg);
+}
+#contact .main .txt span{
+    color: blueviolet;
+}
+#contact .main .txt .email{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 140px;
+}
+#contact .main .txt .email #logo,
+#contact .main .txt .nr #logo{
+    height: 100%;
+    width: 65px;
+    margin-right: 15px;
+    position: absolute;
+}
+#contact .main .txt .email p,
+#contact .main .txt .nr p{
+    font-size: 22px;
+    position: absolute;
+    margin: 13px 0px 0px 80px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+#contact .main .txt .nr{
+    width: 100%;
+    height: 54px;
+    position: absolute;
+    top: 250px;
+}
+#contact .main .txt .media{
+    width: 282px;
+    height: 47px;
+    position: absolute;
+    top: 359px;
+    transition: 1.5s;
+    display: flex;
+    align-items: center;
+}
+#contact .main .txt .media #fbicon{
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    color: gray;
+}
+#contact .main .txt .media #fbicon:hover{
+    color: #1877f2;
+    transform: translateY(-10px);
+}
+#contact .main .txt .media #insicon{
+    position: absolute;
+    transition: 0.5s;
+    left: 76px;
+    cursor: pointer;
+    color: gray;
+}
+#contact .main .txt .media #insicon:hover{
+    color: rgba(214,41,118);
+    transform: translateY(-10px);
+}
+#contact #twiticon{
+    position: absolute;
+    left: 154px;
+    transition: 0.5s;
+    cursor: pointer;
+    color: gray;
+}
+#contact #twiticon:hover{
+    color: #00acee;
+    transform: translateY(-10px);
+}
+#contact #inicon{
+    position: absolute;
+    left: 240px;
+    transition: 0.5s;
+    cursor: pointer;
+    color: gray;
+}
+#contact #inicon:hover{
+    color:  #0072b1;
+    transform: translateY(-10px);
+}
+#contact .main .inputs{
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+#contact .main .inputs #name{
+    position: absolute;
+    width: 94%;
+    height: 50px;
+    top: 19%;
+    left: 3%;
+    border: 0;
+    border-left: 3px solid blueviolet;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    animation-name: anmarea;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    transition: 1.5s;
+}
+#contact .main .inputs #email{
+    position: absolute;
+    width: 94%;
+    height: 50px;
+    top: 33%;
+    left: 3%;
+    border: 0;
+    border-left: 3px solid blueviolet;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    animation-name: anmarea;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    transition: 1.5s;
+}
+#contact #message{
+    position: absolute;
+    width: 94%;
+    height: 200px;
+    top: 47%;
+    left: 3%;
+    outline: none;
+    border: 0;
+    border-left: 3px solid blueviolet;
+    background-color: #262626;
+    padding: 15px;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    animation-name: anmarea;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    transition: 1.5s;
+}
+#contact .main .inputs #name:focus,
+#contact .main .inputs #email:focus,
+#contact .main .inputs #message:focus{
+    border: 2px solid blueviolet;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+#contact .main .inputs .btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: white;
+    text-transform: uppercase;
+    transition: .5s ease;
+    position: absolute;
+    left: 3%;
+    top: 89%;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 999;
+}
+#contact .main .inputs .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: blueviolet;
+    transition: .5s ease;
+    border-radius: 4px;
+}  
+#contact .main .inputs .btn:hover {
+    color: white;
+    transition-delay: .5s;
+}
+#contact .main .inputs .btn:hover::before {
+    width: 100%;
+}  
+#contact .main .inputs .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: blueviolet;
+    transition: .4s ease;
+    z-index: -1;
+    border-radius: 4px;
+}  
+#contact .main .inputs .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+@keyframes anmarea{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes anmh3{
+    from{
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+#contact footer{
+    width: 100%;
+    height: 39px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+#contact footer p{
+    color: white;
+    font-size: 22px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 99;
+    transition: 0.5s;
+}  
+.back-to-top i {
+    color: white;
+    font-size: 24px;
+}  
+.back-to-top:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+@media (max-width:1236px){
+    #about .main{
+        left: 5%;
+    }
+}
+@media (max-width:1217px){
+    #home .main .img #logome {
+        width: 120%;
+    }
+}
+@media (max-width:1124px){
+    #home .main{
+        width: 85%;
+        left: 7%;
+    }
+    #about {
+        height: 857px;
+    }
+    #about .main {
+        width: 84%;
+        height: 722px;
+        top: 120px;
+        left: 7%;
+    }
+    #about .main .img {
+        width: 366px;
+        height: 501px;
+        left: 0;
+        top: 220px;
+        background-color: #001220;
+        z-index: 1;
+    }
+    #about .main .ab {
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
+    #about .main .ab .txt {
+        width: 100%;
+        height: 202px;
+    }
+    #about .main .ab .sd {
+        width: 53%;
+        height: 325px;
+        left: 427px;
+    }
+    #about .main .ab .sd .skillsdiv .htmldiv,
+    #about .main .ab .sd .skillsdiv .cssdiv,
+    #about .main .ab .sd .skillsdiv .jsdiv{
+        width: 140%;
+    }
+}
+@media screen and (max-width: 1116px) {
+    nav ul {
+      margin-left: 0;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;;
+      background-color: white;
+      animation-name: anmul2;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 0s;
+      margin-top: 80px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(213, 255, 255, 0.5);
+      left: 100%;
+    }
+    nav ul li {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      padding: 20px;
+      width: 100%;
+      left: 0px;
+      border-bottom: none;
+      font-size: 25px;
+    }
+    li::after {
+        display: none;
+    }
+    @keyframes anmul2{
+        from{
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        to{
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+    nav #menuicon {
+      display: flex;
+    }
+}
+@media (max-width:980px){
+    #about .main .img{
+        width: 350px;
+    }
+    #about .main .ab .sd {
+        left: 402px;
+    }
+    #contact {
+        height: 1093px;
+    }
+    #contact .main {
+        width: 80%;
+        height: 914px;
+        top: 120px;
+        left: 9%;
+    }
+    #contact .main .txt {
+        width: 100%;
+        height: 422px;
+    }
+    #contact .main .inputs {
+        left: 0;
+        width: 100%;
+        height: 492px;
+        top: 422px;
+    }
+    #contact .main .inputs #name {
+        top: 42px;
+    }
+    #contact .main .inputs #email {
+        top: 123px;
+    }
+    #contact #message{
+        top: 208px;
+    }
+}
+@media (max-width:845px){
+    #about .main .img {
+        max-width: 49%;
+    }
+    #about .main .ab .sd {
+        left: 57%;
+    }
+    #about .main .ab .txt p {
+        font-size: 23px;
+    }
+    #projects {
+        height: 1318px;
+        position: relative;
+    }
+    #projects .main {
+        height: 1205px;
+        position: absolute;
+        top: 87px;
+        left: 7%;
+    }
+    #projects .main .pr {
+        height: 1125px;
+    }
+    #projects .main .pr .fg {
+        width: 50%;
+        height: 560px;
+        left: 50%;
+        position: absolute;
+    }
+    #projects .main .pr .fb {
+        width: 48%;
+        height: 560px;
+        left: 0;
+        position: absolute;
+        top: 579px;
+    }
+    #projects .main .pr .bne {
+        width: 48%;
+    }
+    #projects .main .pr .fg,
+    #projects .main .pr .bne,
+    #projects .main .pr .fb{
+        height: 549px;
+    }
+}
+@media (max-width:780px){
+    #about .main .ab .sd #education{
+        left: 45%;
+    }
+    #home .main .txt {
+        width: 60%;
+    }
+    #home .main .txt h1{
+        top: 90px;
+    }
+    #home .main .img #logome {
+        width: 110%;
+        height: 120%;
+        left: 12px;
+    }
+    #home .main .img {
+        width: 60%;
+        height: 400px;
+        position: absolute;
+        left: 40%;
+        top: 64px;
+    }
+    #home .main .txt #p2{
+        z-index: 99;
+    }
+}
+@media (max-width:700px){
+    #home {
+        height: 884px;
+    }
+    #home .main {
+        width: 85%;
+        left: 7%;
+        height: 739px;
+        top: 120px;
+    }
+    #home .main .img {
+        width: 90%;
+        height: 459px;
+        left: 3%;
+        top: 0px;
+    }
+    #home .main .txt {
+        width: 100%;
+        left: 0;
+        top: 465px;
+        height: 275px;
+    }
+    #home .main .txt #p1{
+        top: 25px;
+    }
+    #home .main .txt h1 {
+        top: 82px;
+    }
+    #home .main .txt #p2{
+        top: 227px;
+    }
+}
+@media (max-width:625px){
+    #about {
+        height: 1124px;
+    }
+    #about .main {
+        width: 84%;
+        height: 984px;
+        left: 7%;
+    }
+    #about .main .img {
+        width: 247px;
+        top: 620px;
+        height: 305px;
+    }
+    #about .main .img #me2{
+        width: 247px;
+    }
+    #about .main .ab .txt p {
+        font-size: 21px;
+    }
+    #about .main .ab .sd {
+        left: 0;
+        top: 254px;
+        width: 100%;
+    }
+    #about .main .ab .sd .skillsdiv .htmldiv,
+    #about .main .ab .sd .skillsdiv .cssdiv, 
+    #about .main .ab .sd .skillsdiv .jsdiv {
+        width: 167%;
+    }
+    #projects {
+        height: 1940px;
+    }
+    #projects .main {
+        height: 1852px;
+    }
+    #projects .main .pr {
+        height: 1772px;
+    }
+    #projects .main .pr .fg, 
+    #projects .main .pr .bne, 
+    #projects .main .pr .fb {
+        height: 549px;
+        width: 100%;
+    }
+    #projects .main .pr .bne #bne {
+        border-radius: 15px 15px 0px 0px;
+        height: 490px;
+        width: 100%;
+        margin-top: -55px;
+        position: absolute;
+    }
+    #projects .main .pr .fg {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 610px;
+    }
+    #projects .main .pr .fb {
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 1222px;
+    }
+}
+@media (max-width:614px){
+    #home .main .txt h1 {
+        top: 89px;
+        left: -4px;
+        font-size: 79px;
+    }
+    .back-to-top{
+        right: 13px;
+    }
+}
+@media (max-width:565px){
+    #home {
+        height: 977px;
+    }
+    #home .main{
+        height: 796px;
+    }
+    #home .main .txt{
+        height: 331px;
+    }
+    #home .main .txt #p2 {
+        top: 300px;
+    }
+    #home .main .txt h1 {
+        top: 79px;
+    }
+    #projects .main .txt h1{
+        font-size: 49px;
+    }
+}
+@media (max-width:500px){
+    #home .main .img {
+        width: 103%;
+        left: -32px;
+    }
+    #contact .main {
+        width: 87%;
+        left: 6%;
+    }
+}
+@media (max-width:483px){
+    #projects .main .txt h1 {
+        font-size: 42px;
+    }
+    nav h1{
+        padding: 10px 30px;
+    }
+}
+@media (max-width:450px){
+    #contact .main .txt .email #logo, 
+    #contact .main .txt .nr #logo{
+        width: 100%;
+        margin-right: 0;
+    }
+    #contact .main .txt .email,
+    #contact .main .txt .nr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #contact .main .txt .email p,
+    #contact .main .txt .nr p{
+        margin: 0;
+    }
+    #contact .main .txt .email {
+        top: 160px;
+    }
+    #contact .main .txt .nr{
+        top: 264px;
+    }
+    #contact .main .txt .media{
+        top: 368px;
+    }
+}
+@media (max-width:430px){
+    #home .main .img {
+        width: 136%;
+        left: -88px
+    }
+    #home{
+        overflow: hidden;
+    }
+}
+@media (max-width:416px){
+    #projects .main{
+        width: 90%;
+        left: 5%;
+    }
+    #projects .main .txt h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width:410px){
+    #about .main {
+        width: 89%;
+        height: 984px;
+        left: 5%;
+    }
+    #about .main .ab .sd .educationsdiv #p2{
+        font-size: 17px;
+    }
+    #about .main .ab .sd .skillsdiv .htmldiv, 
+    #about .main .ab .sd .skillsdiv .cssdiv, 
+    #about .main .ab .sd .skillsdiv .jsdiv {
+        width: 161%;
+    }
+}
+@media (max-width:382px){
+    #about .main .ab .sd {
+        top: 275px;
+    }
+    #home .main .txt #p1,
+    #home .main .txt #p2 {
+        font-size: 23px;
+    }
+    #home .main .txt #p2 {
+        top: 304px;
+    }
+    #about .main .ab .sd {
+        top: 290px;
+    }
+    #about .main .img {
+        top: 643px;
+    }
+}
+@media (max-width:376px){
+    #projects .main .txt h1 {
+        font-size: 37px;
+    }
+}
+@media (max-width:376px){
+    #projects .main .txt h1 {
+        font-size: 35px;
+    }
+}

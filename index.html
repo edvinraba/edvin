@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="./img/logo2.PNG">
+    <title>Edvin Raba</title>
+</head>
+<body>
+  <div id="home">
+    <nav>
+      <a id="logo" onclick="scrollToTop()">
+        <h1><span>E</span>dvin<span>.</span></h1>
+      </a>
+         <i class="fa-solid fa-bars fa-2xl" style="color: #8a2be2;" id="menuicon" onclick="menu()"></i>
+      <ul>
+        <li><a href="#home" onclick="closeNavbar()">home=></a></li>
+        <li><a href="#about" onclick="closeNavbar()">about()</a></li>
+        <li><a href="#projects" onclick="closeNavbar()">projects{}</a></li>
+        <li><a href="#contact" onclick="closeNavbar()">contact/></a></li>
+      </ul>
+  </nav>
+  <div class="main">
+    <div class="txt">
+      <p id="p1">Hello everyone, I'm</p>
+      <h1>Edv<span>in</span> Raba</h1>
+      <p id="p2"><span>Front End</span> Developer</p>
+    </div>
+    <div class="img">
+      <img src="./img/mee.png" id="logome">
+    </div>
+  </div>
+  </div>
+  <div class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <script>
+  function toggleBackToTopButton() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    const homeSection = document.getElementById('home-section');
+    const scrollY = window.scrollY;
+
+    if (scrollY > homeSection.offsetHeight) {
+      backToTopButton.style.opacity = 1;
+    }
+
+    else {
+      backToTopButton.style.opacity = 0;
+    }
+  }
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  window.addEventListener('scroll', toggleBackToTopButton);
+  </script>
+
+  <script>
+    function closeNavbar(){
+      var navbar = document.querySelector('nav ul');
+      var icon = document.getElementById("menuicon")
+
+      if (window.innerWidth <= 1116) {
+        navbar.style.left = '100%';
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      }
+    }
+  </script>
+
+  <script>
+    function menu() {
+      var submenu = document.querySelector("nav ul");
+      var icon = document.getElementById("menuicon")
+      
+      if (submenu.style.left === '100%') {
+        submenu.style.left = '0%';
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+      } else {
+        submenu.style.left = '100%';
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      }
+    }
+    </script> 
+
+  <div id="about">
+    <div class="main">
+      <div class="img">
+        <img src="./img/aboutmee.jpg" id="me2">
+      </div>
+      <div class="ab">
+        <div class="txt">
+          <h2><span>About</span> me(<span>)</span>.</h2>
+          <p>Hello! Im 16 years old , I'm following the path to becoming a <span>Full Stack Developer</span> and to have big success. 
+            But on the other hand I am studying the branch of mechatronics.</p>
+        </div>
+        <div class="sd">
+          <p id="skills" onclick="toggleDiv('skills')">Skills</p>
+          <p id="education" onclick="toggleDiv('education')">Education</p>
+          <div class="skillsdiv" id="skillsDiv">
+            <div class="htmldiv">
+              <img src="./img/html5.svg" id="htmlogo" style="background-color: blueviolet;">
+              <h1>HTML</h1>
+              <progress id="htmlpq" max="100" value="80"></progress>
+            </div>
+            <div class="cssdiv">
+              <img src="./img/CSS.svg" id="csslogo" style="background-color: blueviolet;">
+              <h1>CSS</h1>
+              <progress id="csspq" max="100" value="80"></progress>
+            </div>
+            <div class="jsdiv">
+              <img src="./img/js.svg" id="jslogo" style="background-color: blueviolet;">
+            <h1>JAVASCRIPT</h1>
+            <progress id="jspq" max="100" value="50"></progress>
+            </div>
+          </div>
+          <div class="educationsdiv" id="educationDiv">
+            <p id="year">2022-2023</p>
+            <p id="p2">Learning at Shkolla Digjitale Prizren</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  function toggleDiv(divId) {
+    var skillsDiv = document.getElementById('skillsDiv');
+    var educationDiv = document.getElementById('educationDiv');
+    var skillsTab = document.getElementById('skills');
+    var educationTab = document.getElementById('education');
+
+    if (divId === 'skills') {
+      skillsDiv.style.display = 'block';
+      educationDiv.style.display = 'none';
+      skillsTab.classList.add('active');
+      educationTab.classList.remove('active');
+      education.style.borderBottom = 'none';
+      skills.style.borderBottom = ' 3px solid blueviolet';
+    }
+
+    else if (divId === 'education') {
+      skillsDiv.style.display = 'none';
+      skillsTab.style.borderBottom = 'none';
+      educationDiv.style.display = 'block';
+      skillsTab.classList.remove('active');
+      educationTab.classList.add('active');
+      education.style.borderBottom = ' 3px solid blueviolet';
+    }
+  }
+  </script>
+  <div id="projects">
+    <div class="main">
+      <div class="txt">
+        <h1>My <span>projects</span>{}</h1>
+      </div>
+      <div class="pr">
+        <div class="bne">
+          <a href="https://edvinbadnewseagles.netlify.app/" target="_blank">
+            <img src="./img/bne.webp" id="bne">
+            <p><span>BN</span>E</p>
+        </div>
+       </a>
+
+       <div class="fg">
+        <a href="https://filigranedis.netlify.app/" target="_blank">
+          <div class="main">
+            <img src="./img/fg.PNG" id="fglogo">
+            <p>Filigran<span><br> Edis</span></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="fb">
+        <a href="https://edvinfacebook.netlify.app/" target="_blank">
+        <div class="main">
+          <img src="./img/fblogo.webp" id="fblogo">
+          <p><span>Face</span>book</p>
+        </div>
+      </a>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact">
+    <div class="main">
+      <div class="txt">
+        <h2><span>Contact</span> me/></h2>
+        <div class="email">
+          <img src="./img/email.svg" style="background-color: blueviolet;" id="logo">
+          <p>edvinraba7@gmail.com</p>
+        </div>
+        <div class="nr">
+          <img src="./img/phone.svg" style="background-color: blueviolet;" id="logo">
+          <p>049-388-028</p>
+        </div>
+        <div class="media">
+          <a href="https://www.facebook.com/edvin.raba/" target="_blank">
+            <i class="fa-brands fa-facebook fa-2xl" id="fbicon"></i>
+          </a>
+          <a href="https://www.instagram.com/edvinraba/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2xl" id="insicon"></i>
+          </a>
+          <a href="https://twitter.com/edv1nr/" target="_blank">
+            <i class="fa-brands fa-twitter fa-2xl" id="twiticon"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/edvin-raba-861098277/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl" id="inicon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="inputs">
+        <form action="https://formsubmit.co/edvinraba7@gmail.com"  method="POST" target="_blank">
+          <input type="text" name="Name" placeholder="Your Name"  id="name" title="Your Name" required>
+          <input type="email" name="email" id="email" placeholder="Your Email"  id="email" title="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message..." id="message" title="Your Message" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright <i class="fa-solid fa-copyright fa-1xl" id="copyicon" style="color: #8a2be2;"></i> Edvin Raba</p>
+    </footer>
+  </div>
+</body>
+</html>
